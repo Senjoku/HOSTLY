@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cas Clients & Retours d'Expérience — Hostly</title>
+<meta name="description" content="Découvrez comment des conciergeries réelles de 15 à 50+ logements ont divisé par 4 le temps passé sur WhatsApp et amélioré leurs notes clients.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%230B2B2C%22/><path d=%22M9 8v16M9 16h9M18 8v16%22 stroke=%22%23FF6B4A%22 stroke-width=%223%22 stroke-linecap=%22round%22/><circle cx=%2224%22 cy=%228%22 r=%223%22 fill=%22%23FF6B4A%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- TOP ANNOUNCEMENT TICKER -->
+<div class="announcement-ticker" id="announcementTicker">
+  <div class="ticker-badge-wrap">
+    <span class="ticker-badge">
+      <span class="ticker-dot"></span>
+      <span>NOUVEAU</span>
+    </span>
+  </div>
+
+  <div class="ticker-track-container" id="tickerTrackContainer">
+    <div class="ticker-track">
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span class="ticker-text"><strong>Connecteurs 2026 :</strong> Hostaway & Hospitable certifiés • Synchronisation 1-clic</span>
+        <a href="demo.html" class="ticker-link">Tester en direct <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="ticker-text"><strong>Filtre IA de tri :</strong> -82% d'interruptions et routage direct vers le bon prestataire</span>
+        <a href="fonctionnalites.html" class="ticker-link">Découvrir <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="ticker-text"><strong>Expérience Voyageur :</strong> QR Code WhatsApp sans aucune application à installer</span>
+        <a href="demo.html" class="ticker-link">Voir la démo <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="ticker-text"><strong>Sécurité post-checkout :</strong> Fenêtre active +48h pour capter les objets oubliés</span>
+        <a href="cas-clients.html" class="ticker-link">Cas clients <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="ticker-text"><strong>Rentabilité :</strong> Calculez vos heures économisées avec notre simulateur</span>
+        <a href="simulateur.html" class="ticker-link">Calculer mon ROI <span class="ticker-arrow">→</span></a>
+      </div>
+      <!-- Doublon pour boucle infinie fluide -->
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span class="ticker-text"><strong>Connecteurs 2026 :</strong> Hostaway & Hospitable certifiés • Synchronisation 1-clic</span>
+        <a href="demo.html" class="ticker-link">Tester en direct <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="ticker-text"><strong>Filtre IA de tri :</strong> -82% d'interruptions et routage direct vers le bon prestataire</span>
+        <a href="fonctionnalites.html" class="ticker-link">Découvrir <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="ticker-text"><strong>Expérience Voyageur :</strong> QR Code WhatsApp sans aucune application à installer</span>
+        <a href="demo.html" class="ticker-link">Voir la démo <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="ticker-text"><strong>Sécurité post-checkout :</strong> Fenêtre active +48h pour capter les objets oubliés</span>
+        <a href="cas-clients.html" class="ticker-link">Cas clients <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="ticker-text"><strong>Rentabilité :</strong> Calculez vos heures économisées avec notre simulateur</span>
+        <a href="simulateur.html" class="ticker-link">Calculer mon ROI <span class="ticker-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker-actions">
+    <button class="ticker-pause-btn" aria-label="Mettre en pause le ticker" title="Pause / Reprendre">
+      <svg class="icon-svg icon-sm ticker-pause-icon" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+      <svg class="icon-svg icon-sm ticker-play-icon" viewBox="0 0 24 24" style="display: none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    </button>
+    <button class="announcement-close" aria-label="Fermer la bannière" title="Fermer">
+      <svg class="icon-svg icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- HEADER NAVIGATION -->
+<div class="header-wrapper">
+  <header class="nav">
+    <a href="index.html" class="logo" aria-label="Hostly — accueil">
+      <svg viewBox="0 0 32 32" class="logo-mark" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="var(--ink)"/>
+        <path d="M9 8v16M9 16h9M18 8v16" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="24" cy="8" r="3" fill="var(--coral)"/>
+      </svg>
+      <span>Hostly</span>
+    </a>
+    <nav class="nav-links">
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="demo.html">Démo interactive</a>
+      <a href="simulateur.html">Simulateur ROI</a>
+      <a href="cas-clients.html" class="active">Cas clients</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="demo.html" class="btn btn-primary btn-nav">Tester la démo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="nav-toggle-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<!-- MENU MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Accueil</a>
+  <a href="fonctionnalites.html">Fonctionnalités</a>
+  <a href="demo.html">Démo interactive</a>
+  <a href="simulateur.html">Simulateur de ROI</a>
+  <a href="cas-clients.html" class="active">Cas clients</a>
+  <a href="blog.html">Blog</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html" class="btn btn-primary">Prendre RDV</a>
+</div>
+
+<main>
+
+  <section class="cases-section">
+    <div class="section-inner">
+      <div class="live-status-bar live-status-bar-light">
+        <span class="live-dot"></span>
+        <span>Retours d'expérience vérifiés sur le terrain</span>
+      </div>
+      <p class="eyebrow eyebrow-dark">Études de cas concrètes</p>
+      <h1>Comment ils ont fait sauter le goulot d'étranglement de WhatsApp.</h1>
+      <p style="color: var(--muted); font-size: 16.5px; max-width: 680px;">Découvrez comment des conciergeries indépendantes ont sécurisé leurs opérations, préservé leurs équipes et fidélisé leurs propriétaires avec Hostly.</p>
+
+      <div class="case-cards-list">
+        
+        <!-- CASE 1 -->
+        <div class="case-card glow-card">
+          <div>
+            <div class="case-meta">
+              <span class="mono-tag">
+                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" style="color: var(--coral-dark);"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                34 logements • Côte Basque
+              </span>
+              <span style="font-size: 13px; color: var(--muted);">PMS : Hospitable</span>
+            </div>
+            <h2>Conciergerie Archipel</h2>
+            <p style="color: var(--text); font-size: 15px;">En haute saison, la conciergerie recevait plus de 130 messages par jour. Les coordinateurs passaient 4 heures chaque après-midi à copier-coller des consignes aux femmes de ménage.</p>
+            
+            <blockquote class="case-quote">
+              "En plein mois d'août, mon téléphone ne vibrait plus pour des questions de code portail ou de serviettes. Tout est routé directement à nos équipes sur le terrain sans qu'on fasse le relais."
+              <span class="case-author">— Éléonore M., Co-fondatrice de Conciergerie Archipel</span>
+            </blockquote>
+          </div>
+
+          <div class="case-metrics-box">
+            <div class="case-metric-item">
+              <div class="case-metric-num" data-counter="82" data-suffix="%">-82%</div>
+              <p class="case-metric-label">De messages manuels transférés au gérant</p>
+            </div>
+            <div class="case-metric-item">
+              <div class="case-metric-num" data-counter="0" data-suffix=" oubli">0 oubli</div>
+              <p class="case-metric-label">D'intervention de ménage sur 4 mois d'été</p>
+            </div>
+            <div class="case-metric-item">
+              <div class="case-metric-num" data-counter="4.94" data-suffix="/5" data-decimals="2">4.94/5</div>
+              <p class="case-metric-label">Note moyenne propreté sur Airbnb (+0.2)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE 2 -->
+        <div class="case-card glow-card">
+          <div>
+            <div class="case-meta">
+              <span class="mono-tag">
+                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" style="color: var(--coral-dark);"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                46 logements • Lyon & Villeurbanne
+              </span>
+              <span style="font-size: 13px; color: var(--muted);">PMS : Hostaway</span>
+            </div>
+            <h2>Les Clés Urbaines</h2>
+            <p style="color: var(--text); font-size: 15px;">Avec des séjours professionnels courts (1 à 2 nuits), les demandes de late check-out et de consignes bagages perturbaient constamment le planning des prestataires d'entretien.</p>
+            
+            <blockquote class="case-quote">
+              "Hostly parle directement à nos femmes de chambre avec des fiches nettes. La fenêtre active 48h post-checkout nous a évité 5 réclamations pour objets oubliés en 2 mois."
+              <span class="case-author">— Julien D., Directeur des opérations</span>
+            </blockquote>
+          </div>
+
+          <div class="case-metrics-box">
+            <div class="case-metric-item">
+              <div class="case-metric-num" data-counter="3.5" data-prefix="+" data-suffix="h" data-decimals="1">+3.5h</div>
+              <p class="case-metric-label">De temps de gestion économisé chaque jour</p>
+            </div>
+            <div class="case-metric-item">
+              <div class="case-metric-num" data-counter="100" data-suffix="%">100%</div>
+              <p class="case-metric-label">Des objets oubliés signalés et tracés</p>
+            </div>
+            <div class="case-metric-item">
+              <div class="case-metric-num" data-counter="18" data-suffix=" jours">18 jours</div>
+              <p class="case-metric-label">Délai pour rentabiliser l'abonnement Hostly</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE 3 -->
+        <div class="case-card glow-card">
+          <div>
+            <div class="case-meta">
+              <span class="mono-tag">
+                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" style="color: var(--coral-dark);"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                19 chalets • Haute-Savoie
+              </span>
+              <span style="font-size: 13px; color: var(--muted);">PMS : Guesty</span>
+            </div>
+            <h2>Chalet & Cimes</h2>
+            <p style="color: var(--text); font-size: 15px;">Des biens haut de gamme avec équipements techniques délicats (sauna, poêles à granules, spas). Les vacanciers appelaient régulièrement à 23h pour des incompréhensions mineures de réglage.</p>
+            
+            <blockquote class="case-quote">
+              "Les notices interactives guidées par l'IA ont divisé par 10 les appels de nuit. Nos propriétaires apprécient énormément d'avoir un bilan propre sans être spammés."
+              <span class="case-author">— Marc V., Associé gérant</span>
+            </blockquote>
+          </div>
+
+          <div class="case-metrics-box">
+            <div class="case-metric-item">
+              <div class="case-metric-num" data-counter="94" data-suffix="%">-94%</div>
+              <p class="case-metric-label">D'appels d'urgence nocturnes injustifiés</p>
+            </div>
+            <div class="case-metric-item">
+              <div class="case-metric-num" data-counter="2" data-suffix=" min">2 min</div>
+              <p class="case-metric-label">Délai moyen de résolution pour un doute d'accès</p>
+            </div>
+            <div class="case-metric-item">
+              <div class="case-metric-num" data-counter="100" data-suffix="%">100%</div>
+              <p class="case-metric-label">De satisfaction des propriétaires partenaires</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="section-inner cta-inner">
+      <h2>Votre conciergerie a les mêmes défis quotidiens.</h2>
+      <p>Voyez comment Hostly s'installe en moins de 48 heures sur votre portefeuille de logements.</p>
+      <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+        <a href="demo.html" class="btn btn-primary btn-lg">Tester la démo en direct</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Demander un diagnostic personnalisé</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 32 32" class="logo-mark" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="var(--paper)" fill-opacity="0.08"/>
+          <path d="M9 8v16M9 16h9M18 8v16" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="8" r="3" fill="var(--coral)"/>
+        </svg>
+        <span>Hostly</span>
+      </div>
+      <p class="footer-desc">Le filtre intelligent entre vos voyageurs, votre équipe terrain et les propriétaires de conciergerie.</p>
+    </div>
+
+    <div class="footer-nav-col">
+      <span class="footer-nav-title">Produit</span>
+      <div class="footer-links">
+        <a href="fonctionnalites.html">Fonctionnalités</a>
+        <a href="demo.html">Démo interactive</a>
+        <a href="simulateur.html">Simulateur ROI</a>
+        <a href="index.html#pricing">Tarif unique</a>
+      </div>
+    </div>
+
+    <div class="footer-nav-col">
+      <span class="footer-nav-title">Ressources</span>
+      <div class="footer-links">
+        <a href="cas-clients.html">Cas clients</a>
+        <a href="blog.html">Blog & Notes de terrain</a>
+        <a href="faq.html">Questions fréquentes</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+
+    <div class="footer-nav-col">
+      <span class="footer-nav-title">Contact</span>
+      <div class="footer-links">
+        <a href="mailto:contact@hostly.app">contact@hostly.app</a>
+        <a href="contact.html">Demander un audit gratuit</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Hostly. Tous droits réservés.</span>
+    <span>Conçu pour les conciergeries indépendantes et exigeantes.</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

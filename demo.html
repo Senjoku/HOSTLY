@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Démo Interactive & Simulateur — Hostly</title>
+<meta name="description" content="Testez le bac à sable interactif d'Hostly : découvrez en direct comment une conversation voyageur est classée et transmise instantanément à la bonne personne.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%230B2B2C%22/><path d=%22M9 8v16M9 16h9M18 8v16%22 stroke=%22%23FF6B4A%22 stroke-width=%223%22 stroke-linecap=%22round%22/><circle cx=%2224%22 cy=%228%22 r=%223%22 fill=%22%23FF6B4A%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- TOP ANNOUNCEMENT TICKER -->
+<div class="announcement-ticker" id="announcementTicker">
+  <div class="ticker-badge-wrap">
+    <span class="ticker-badge">
+      <span class="ticker-dot"></span>
+      <span>NOUVEAU</span>
+    </span>
+  </div>
+
+  <div class="ticker-track-container" id="tickerTrackContainer">
+    <div class="ticker-track">
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span class="ticker-text"><strong>Connecteurs 2026 :</strong> Hostaway & Hospitable certifiés • Synchronisation 1-clic</span>
+        <a href="demo.html" class="ticker-link">Tester en direct <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="ticker-text"><strong>Filtre IA de tri :</strong> -82% d'interruptions et routage direct vers le bon prestataire</span>
+        <a href="fonctionnalites.html" class="ticker-link">Découvrir <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="ticker-text"><strong>Expérience Voyageur :</strong> QR Code WhatsApp sans aucune application à installer</span>
+        <a href="demo.html" class="ticker-link">Voir la démo <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="ticker-text"><strong>Sécurité post-checkout :</strong> Fenêtre active +48h pour capter les objets oubliés</span>
+        <a href="cas-clients.html" class="ticker-link">Cas clients <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="ticker-text"><strong>Rentabilité :</strong> Calculez vos heures économisées avec notre simulateur</span>
+        <a href="simulateur.html" class="ticker-link">Calculer mon ROI <span class="ticker-arrow">→</span></a>
+      </div>
+      <!-- Doublon pour boucle infinie fluide -->
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span class="ticker-text"><strong>Connecteurs 2026 :</strong> Hostaway & Hospitable certifiés • Synchronisation 1-clic</span>
+        <a href="demo.html" class="ticker-link">Tester en direct <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="ticker-text"><strong>Filtre IA de tri :</strong> -82% d'interruptions et routage direct vers le bon prestataire</span>
+        <a href="fonctionnalites.html" class="ticker-link">Découvrir <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="ticker-text"><strong>Expérience Voyageur :</strong> QR Code WhatsApp sans aucune application à installer</span>
+        <a href="demo.html" class="ticker-link">Voir la démo <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="ticker-text"><strong>Sécurité post-checkout :</strong> Fenêtre active +48h pour capter les objets oubliés</span>
+        <a href="cas-clients.html" class="ticker-link">Cas clients <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="ticker-text"><strong>Rentabilité :</strong> Calculez vos heures économisées avec notre simulateur</span>
+        <a href="simulateur.html" class="ticker-link">Calculer mon ROI <span class="ticker-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker-actions">
+    <button class="ticker-pause-btn" aria-label="Mettre en pause le ticker" title="Pause / Reprendre">
+      <svg class="icon-svg icon-sm ticker-pause-icon" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+      <svg class="icon-svg icon-sm ticker-play-icon" viewBox="0 0 24 24" style="display: none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    </button>
+    <button class="announcement-close" aria-label="Fermer la bannière" title="Fermer">
+      <svg class="icon-svg icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- HEADER NAVIGATION -->
+<div class="header-wrapper">
+  <header class="nav">
+    <a href="index.html" class="logo" aria-label="Hostly — accueil">
+      <svg viewBox="0 0 32 32" class="logo-mark" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="var(--ink)"/>
+        <path d="M9 8v16M9 16h9M18 8v16" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="24" cy="8" r="3" fill="var(--coral)"/>
+      </svg>
+      <span>Hostly</span>
+    </a>
+    <nav class="nav-links">
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="demo.html" class="active">Démo interactive</a>
+      <a href="simulateur.html">Simulateur ROI</a>
+      <a href="cas-clients.html">Cas clients</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary btn-nav">Prendre RDV</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="nav-toggle-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<!-- MENU MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Accueil</a>
+  <a href="fonctionnalites.html">Fonctionnalités</a>
+  <a href="demo.html" class="active">Démo interactive</a>
+  <a href="simulateur.html">Simulateur de ROI</a>
+  <a href="cas-clients.html">Cas clients</a>
+  <a href="blog.html">Blog</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html" class="btn btn-primary">Prendre RDV</a>
+</div>
+
+<main>
+
+  <!-- DEMO HERO -->
+  <section class="sandbox-section">
+    <div class="section-inner">
+      <div class="live-status-bar live-status-bar-light">
+        <span class="live-dot"></span>
+        <span>Bac à sable interactif — Simulation en direct</span>
+      </div>
+      <p class="eyebrow eyebrow-dark">Démonstration sans inscription</p>
+      <h1>Testez Hostly en conditions réelles</h1>
+      <p style="color: var(--muted); font-size: 16.5px; max-width: 680px;">Choisissez un scénario ci-dessous. Observez à gauche l'échange WhatsApp avec le voyageur, et à droite la façon dont Hostly formate et route l'action pour chaque rôle de votre équipe.</p>
+
+      <!-- SCENARIO SELECTOR CHIPS -->
+      <div class="scenario-selector" id="sandboxChips"></div>
+
+      <!-- SANDBOX INTERFACE -->
+      <div class="sandbox-container">
+        
+        <!-- TELEPHONE WHATSAPP SIMULÉ -->
+        <div class="phone-mockup glow-card">
+          <div class="phone-bar">
+            <div class="phone-avatar">H</div>
+            <div class="phone-info">
+              <h4>Hostly • Conciergerie</h4>
+              <p>● En ligne — Réponse instantanée</p>
+            </div>
+          </div>
+          <div class="phone-chat" id="sandboxChat">
+            <!-- Messages injectés via demo-sandbox.js -->
+          </div>
+        </div>
+
+        <!-- INSPECTEUR DE ROUTAGE MULTI-ROLES -->
+        <div class="dispatch-screen">
+          <div class="dispatch-screen-header">
+            <h3>Inspecteur de Routage en temps réel</h3>
+            <span class="mono-tag">Dispatch automatique</span>
+          </div>
+
+          <div class="dispatch-log-cards">
+            <!-- Rôle Nettoyeur -->
+            <div class="role-card" id="roleNettoyeur">
+              <div class="role-header">
+                <span class="role-title">
+                  <svg class="icon-svg icon-sm" viewBox="0 0 24 24" style="color: var(--sage-dark);"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                  <span>Agent de Propreté / Linge</span>
+                </span>
+                <span class="role-status flux-badge-ménage">En attente</span>
+              </div>
+              <p class="role-body">Sélectionnez un scénario ci-dessus pour observer le routage.</p>
+            </div>
+
+            <!-- Rôle Manager -->
+            <div class="role-card" id="roleManager">
+              <div class="role-header">
+                <span class="role-title">
+                  <svg class="icon-svg icon-sm" viewBox="0 0 24 24" style="color: var(--coral-dark);"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <span>Manager de Conciergerie</span>
+                </span>
+                <span class="role-status flux-badge-escalade">En attente</span>
+              </div>
+              <p class="role-body">Sélectionnez un scénario ci-dessus pour observer le routage.</p>
+            </div>
+
+            <!-- Rôle Propriétaire -->
+            <div class="role-card" id="roleProprietaire">
+              <div class="role-header">
+                <span class="role-title">
+                  <svg class="icon-svg icon-sm" viewBox="0 0 24 24" style="color: var(--muted);"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  <span>Propriétaire du Logement</span>
+                </span>
+                <span class="role-status flux-badge-auto">Consultation passive</span>
+              </div>
+              <p class="role-body">Sélectionnez un scénario ci-dessus pour observer le routage.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK DEMO BOOKING FORM -->
+  <section class="contact-section" style="background: var(--paper-alt); padding: 80px 0; border-radius: var(--radius-lg); margin: 40px auto; max-width: 1280px;">
+    <div class="section-inner">
+      <div style="text-align: center; max-width: 640px; margin: 0 auto 36px;">
+        <p class="eyebrow eyebrow-dark">Passez à l'étape suivante</p>
+        <h2>Envie de brancher Hostly sur un logement test ?</h2>
+        <p style="color: var(--muted); font-size: 15.5px;">Réservez une session visio de 20 minutes avec un spécialiste pour voir la synchronisation directe avec votre PMS et vos propres équipes.</p>
+      </div>
+
+      <div style="max-width: 580px; margin: 0 auto;" class="booking-card glow-card">
+        <form id="demoBookingForm">
+          <div class="form-group">
+            <label class="form-label">Votre nom complet</label>
+            <input type="text" class="form-input" placeholder="Ex: Thomas Martin" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Email professionnel</label>
+              <input type="email" class="form-input" placeholder="thomas@conciergerie.fr" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Téléphone</label>
+              <input type="tel" class="form-input" placeholder="06 12 34 56 78" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Nombre de logements</label>
+              <select class="form-select" required>
+                <option value="15-25">15 à 25 logements</option>
+                <option value="26-50" selected>26 à 50 logements</option>
+                <option value="50+">Plus de 50 logements</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">PMS actuel</label>
+              <select class="form-select" required>
+                <option value="hostaway">Hostaway</option>
+                <option value="hospitable">Hospitable</option>
+                <option value="guesty">Guesty</option>
+                <option value="beds24">Beds24</option>
+                <option value="smoobu">Smoobu</option>
+                <option value="autre">Autre / Aucun</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Choisissez un créneau privilégié</label>
+            <input type="hidden" id="selectedSlot" value="Demain 10h00">
+            <div class="slot-picker">
+              <div class="slot-btn active" data-slot="Demain 10h00">Demain 10h00</div>
+              <div class="slot-btn" data-slot="Demain 14h30">Demain 14h30</div>
+              <div class="slot-btn" data-slot="Mercredi 11h00">Mercredi 11h00</div>
+              <div class="slot-btn" data-slot="Jeudi 15h30">Jeudi 15h30</div>
+              <div class="slot-btn" data-slot="Vendredi 10h00">Vendredi 10h00</div>
+              <div class="slot-btn" data-slot="Sur mesure">Autre date</div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 12px;">Confirmer ma démo personnalisée →</button>
+
+          <div class="form-success-banner" id="bookingSuccess">
+            <h4>
+              <svg class="icon-svg icon-sm" viewBox="0 0 24 24" style="color: var(--sage-dark);"><polyline points="20 6 9 17 4 12"/></svg>
+              Demande de démo enregistrée !
+            </h4>
+            <p>Nous vous envoyons immédiatement l'invitation Google Meet sur votre adresse email.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 32 32" class="logo-mark" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="var(--paper)" fill-opacity="0.08"/>
+          <path d="M9 8v16M9 16h9M18 8v16" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="8" r="3" fill="var(--coral)"/>
+        </svg>
+        <span>Hostly</span>
+      </div>
+      <p class="footer-desc">Le filtre intelligent entre vos voyageurs, votre équipe terrain et les propriétaires de conciergerie.</p>
+    </div>
+
+    <div class="footer-nav-col">
+      <span class="footer-nav-title">Produit</span>
+      <div class="footer-links">
+        <a href="fonctionnalites.html">Fonctionnalités</a>
+        <a href="demo.html">Démo interactive</a>
+        <a href="simulateur.html">Simulateur ROI</a>
+        <a href="index.html#pricing">Tarif unique</a>
+      </div>
+    </div>
+
+    <div class="footer-nav-col">
+      <span class="footer-nav-title">Ressources</span>
+      <div class="footer-links">
+        <a href="cas-clients.html">Cas clients</a>
+        <a href="blog.html">Blog & Notes de terrain</a>
+        <a href="faq.html">Questions fréquentes</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+
+    <div class="footer-nav-col">
+      <span class="footer-nav-title">Contact</span>
+      <div class="footer-links">
+        <a href="mailto:contact@hostly.app">contact@hostly.app</a>
+        <a href="contact.html">Demander un audit gratuit</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Hostly. Tous droits réservés.</span>
+    <span>Conçu pour les conciergeries indépendantes et exigeantes.</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/demo-sandbox.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

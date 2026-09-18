@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ & Sécurité — Hostly</title>
+<meta name="description" content="Toutes les réponses à vos questions sur le fonctionnement d'Hostly : déploiement, IA, WhatsApp, équipes terrain, PMS et sécurité.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%230B2B2C%22/><path d=%22M9 8v16M9 16h9M18 8v16%22 stroke=%22%23FF6B4A%22 stroke-width=%223%22 stroke-linecap=%22round%22/><circle cx=%2224%22 cy=%228%22 r=%223%22 fill=%22%23FF6B4A%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- TOP ANNOUNCEMENT TICKER -->
+<div class="announcement-ticker" id="announcementTicker">
+  <div class="ticker-badge-wrap">
+    <span class="ticker-badge">
+      <span class="ticker-dot"></span>
+      <span>NOUVEAU</span>
+    </span>
+  </div>
+
+  <div class="ticker-track-container" id="tickerTrackContainer">
+    <div class="ticker-track">
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span class="ticker-text"><strong>Connecteurs 2026 :</strong> Hostaway & Hospitable certifiés • Synchronisation 1-clic</span>
+        <a href="demo.html" class="ticker-link">Tester en direct <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="ticker-text"><strong>Filtre IA de tri :</strong> -82% d'interruptions et routage direct vers le bon prestataire</span>
+        <a href="fonctionnalites.html" class="ticker-link">Découvrir <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="ticker-text"><strong>Expérience Voyageur :</strong> QR Code WhatsApp sans aucune application à installer</span>
+        <a href="demo.html" class="ticker-link">Voir la démo <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="ticker-text"><strong>Sécurité post-checkout :</strong> Fenêtre active +48h pour capter les objets oubliés</span>
+        <a href="cas-clients.html" class="ticker-link">Cas clients <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="ticker-text"><strong>Rentabilité :</strong> Calculez vos heures économisées avec notre simulateur</span>
+        <a href="simulateur.html" class="ticker-link">Calculer mon ROI <span class="ticker-arrow">→</span></a>
+      </div>
+      <!-- Doublon pour boucle infinie fluide -->
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span class="ticker-text"><strong>Connecteurs 2026 :</strong> Hostaway & Hospitable certifiés • Synchronisation 1-clic</span>
+        <a href="demo.html" class="ticker-link">Tester en direct <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="ticker-text"><strong>Filtre IA de tri :</strong> -82% d'interruptions et routage direct vers le bon prestataire</span>
+        <a href="fonctionnalites.html" class="ticker-link">Découvrir <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="ticker-text"><strong>Expérience Voyageur :</strong> QR Code WhatsApp sans aucune application à installer</span>
+        <a href="demo.html" class="ticker-link">Voir la démo <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="ticker-text"><strong>Sécurité post-checkout :</strong> Fenêtre active +48h pour capter les objets oubliés</span>
+        <a href="cas-clients.html" class="ticker-link">Cas clients <span class="ticker-arrow">→</span></a>
+      </div>
+      <div class="ticker-item" aria-hidden="true">
+        <svg class="ticker-svg" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="ticker-text"><strong>Rentabilité :</strong> Calculez vos heures économisées avec notre simulateur</span>
+        <a href="simulateur.html" class="ticker-link">Calculer mon ROI <span class="ticker-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker-actions">
+    <button class="ticker-pause-btn" aria-label="Mettre en pause le ticker" title="Pause / Reprendre">
+      <svg class="icon-svg icon-sm ticker-pause-icon" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+      <svg class="icon-svg icon-sm ticker-play-icon" viewBox="0 0 24 24" style="display: none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    </button>
+    <button class="announcement-close" aria-label="Fermer la bannière" title="Fermer">
+      <svg class="icon-svg icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- HEADER NAVIGATION -->
+<div class="header-wrapper">
+  <header class="nav">
+    <a href="index.html" class="logo" aria-label="Hostly — accueil">
+      <svg viewBox="0 0 32 32" class="logo-mark" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="var(--ink)"/>
+        <path d="M9 8v16M9 16h9M18 8v16" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="24" cy="8" r="3" fill="var(--coral)"/>
+      </svg>
+      <span>Hostly</span>
+    </a>
+    <nav class="nav-links">
+      <a href="fonctionnalites.html">Fonctionnalités</a>
+      <a href="demo.html">Démo interactive</a>
+      <a href="simulateur.html">Simulateur ROI</a>
+      <a href="cas-clients.html">Cas clients</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html" class="active">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="demo.html" class="btn btn-primary btn-nav">Tester la démo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="nav-toggle-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<!-- MENU MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Accueil</a>
+  <a href="fonctionnalites.html">Fonctionnalités</a>
+  <a href="demo.html">Démo interactive</a>
+  <a href="simulateur.html">Simulateur de ROI</a>
+  <a href="cas-clients.html">Cas clients</a>
+  <a href="blog.html">Blog</a>
+  <a href="faq.html" class="active">FAQ</a>
+  <a href="contact.html" class="btn btn-primary">Prendre RDV</a>
+</div>
+
+<main>
+
+  <section class="faq-section">
+    <div class="section-inner">
+      <div style="text-align: center; max-width: 640px; margin: 0 auto 36px;">
+        <p class="eyebrow eyebrow-dark">Questions fréquentes & Transparence</p>
+        <h1>Tout ce que vous devez savoir avant de brancher Hostly.</h1>
+        <p style="color: var(--muted); font-size: 16.5px;">Des réponses directes et sans détour sur l'intégration, l'IA, vos équipes terrain et la protection des données.</p>
+      </div>
+
+      <!-- RECHERCHE EN DIRECT -->
+      <div class="faq-search-wrap">
+        <svg class="icon-svg icon-sm faq-search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="faq-search-input" id="faqSearch" placeholder="Rechercher une question (ex: PMS, ménage, urgence, RGPD...)...">
+      </div>
+
+      <!-- CATEGORIES -->
+      <div class="faq-filter-btns">
+        <button class="faq-cat-btn active" data-category="all">Toutes les questions</button>
+        <button class="faq-cat-btn" data-category="deploiement">Déploiement & PMS</button>
+        <button class="faq-cat-btn" data-category="ia">IA & Routage</button>
+        <button class="faq-cat-btn" data-category="equipe">Équipes & Ménage</button>
+        <button class="faq-cat-btn" data-category="tarifs">Tarifs & Données</button>
+      </div>
+
+      <!-- ACCORDEONS LIST -->
+      <div class="faq-list">
+        
+        <!-- Item 1 -->
+        <div class="faq-item" data-category="deploiement">
+          <button class="faq-question-btn">
+            <span>Combien de temps faut-il pour déployer Hostly sur mon parc ?</span>
+            <svg class="icon-svg icon-sm faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Moins de 48 heures en moyenne. La synchronisation avec votre PMS (Hospitable, Hostaway, Guesty, etc.) se fait en quelques clics via notre connecteur API sécurisé. Nous générons immédiatement les kits de QR codes personnalisés pour chacun de vos logements.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="faq-item" data-category="ia">
+          <button class="faq-question-btn">
+            <span>Que se passe-t-il si un voyageur est mécontent ou agressif ?</span>
+            <svg class="icon-svg icon-sm faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>L'IA Hostly intègre un analyseur de sentiment en continu. Dès qu'un mécontentement ou une insatisfaction est détecté, l'IA cesse les réponses automatiques et déclenche une <strong>escalade prioritaire immédiate</strong> vers le manager avec un résumé des faits pour une reprise en main humaine instantanée.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="faq-item" data-category="equipe">
+          <button class="faq-question-btn">
+            <span>Mes femmes de ménage ou prestataires doivent-ils installer une application ?</span>
+            <svg class="icon-svg icon-sm faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Absolument pas. Vos prestataires d'entretien reçoivent leurs fiches de tâches directement sur leur WhatsApp personnel ou par SMS. Elles contiennent uniquement ce qui les concerne : adresse, numéro de chambre, consigne précise et bouton de validation de tâche.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="faq-item" data-category="deploiement">
+          <button class="faq-question-btn">
+            <span>Hostly remplace-t-il mon PMS actuel ?</span>
+            <svg class="icon-svg icon-sm faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Non, et c'est voulu. Votre PMS (Hospitable, Hostaway, Smoobu, etc.) reste la source de vérité pour les réservations, les tarifs et les calendriers. Hostly se branche à côté pour assurer exclusivement la couche de coordination humaine et terrain pendant le séjour.</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="faq-item" data-category="ia">
+          <button class="faq-question-btn">
+            <span>Comment fonctionne la fenêtre de conversation active 48h post-checkout ?</span>
+            <svg class="icon-svg icon-sm faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>La conversation WhatsApp reste accessible au voyageur pendant 24 à 48 heures après son départ afin de capter un éventuel oubli d'objet ou une remarque sur l'état des lieux. Les messages post-départ sont systématiquement routés vers le manager, jamais vers le nettoyeur.</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="faq-item" data-category="equipe">
+          <button class="faq-question-btn">
+            <span>Mes propriétaires ont-ils accès aux conversations des voyageurs ?</span>
+            <svg class="icon-svg icon-sm faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Oui. Chaque propriétaire dispose d'un espace de consultation passive. Il peut relire l'historique complet et les synthèses générées par l'IA à tout moment, mais ne reçoit <strong>aucune notification intempestive</strong> durant le séjour.</p>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="faq-item" data-category="tarifs">
+          <button class="faq-question-btn">
+            <span>Y a-t-il un engagement de durée ou des frais de mise en service ?</span>
+            <svg class="icon-svg icon-sm faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Aucun engagement de durée. Le tarif est fixe : <strong>20 € HT / logement / mois</strong>, sans palier caché, sans commission sur vos réservations et sans frais d'installation. Vous pouvez résilier ou ajuster le nombre de logements à tout moment.</p>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="faq-item" data-category="tarifs">
+          <button class="faq-question-btn">
+            <span>Comment sont traitées et sécurisées les données des voyageurs (RGPD) ?</span>
+            <svg class="icon-svg icon-sm faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Toutes les données sont hébergées sur des serveurs sécurisés en Union Européenne. Les données de contact des voyageurs sont anonymisées et purgées automatiquement après l'expiration de la fenêtre de clôture du séjour.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- EMPTY STATE RECHERCHE -->
+      <div id="faqEmptyState" style="display: none; text-align: center; padding: 40px; color: var(--muted);">
+        <p style="font-size: 16px;">Aucune question ne correspond exactement à votre recherche.</p>
+        <a href="contact.html" class="btn btn-outline btn-sm">Poser votre question à notre équipe →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="section-inner cta-inner">
+      <h2>Vous avez une question spécifique sur vos logements ?</h2>
+      <p>Notre équipe technique vous répond en moins de 2 heures ouvrées.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Contacter un conseiller Hostly</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 32 32" class="logo-mark" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="var(--paper)" fill-opacity="0.08"/>
+          <path d="M9 8v16M9 16h9M18 8v16" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="8" r="3" fill="var(--coral)"/>
+        </svg>
+        <span>Hostly</span>
+      </div>
+      <p class="footer-desc">Le filtre intelligent entre vos voyageurs, votre équipe terrain et les propriétaires de conciergerie.</p>
+    </div>
+
+    <div class="footer-nav-col">
+      <span class="footer-nav-title">Produit</span>
+      <div class="footer-links">
+        <a href="fonctionnalites.html">Fonctionnalités</a>
+        <a href="demo.html">Démo interactive</a>
+        <a href="simulateur.html">Simulateur ROI</a>
+        <a href="index.html#pricing">Tarif unique</a>
+      </div>
+    </div>
+
+    <div class="footer-nav-col">
+      <span class="footer-nav-title">Ressources</span>
+      <div class="footer-links">
+        <a href="cas-clients.html">Cas clients</a>
+        <a href="blog.html">Blog & Notes de terrain</a>
+        <a href="faq.html">Questions fréquentes</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+
+    <div class="footer-nav-col">
+      <span class="footer-nav-title">Contact</span>
+      <div class="footer-links">
+        <a href="mailto:contact@hostly.app">contact@hostly.app</a>
+        <a href="contact.html">Demander un audit gratuit</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Hostly. Tous droits réservés.</span>
+    <span>Conçu pour les conciergeries indépendantes et exigeantes.</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/faq.js"></script>
+</body>
+</html>
