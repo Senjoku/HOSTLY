@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /.*
+Disallow: /*.md$
+Disallow: /*.json$
+Disallow: /*.conf$
+
+Sitemap: https://hostly.app/sitemap.xml
